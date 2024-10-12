@@ -28,5 +28,6 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
+include(":base")
 include(":core")
+include(":composeApp")
