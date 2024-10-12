@@ -2,7 +2,7 @@ package com.nsfwcyoamaker.wombtattoocyoa.domain
 
 import androidx.compose.ui.unit.IntSize
 import org.jetbrains.compose.resources.DrawableResource
-import wombtattoocyoa.domain.generated.resources.*
+import wombtattoocyoa.core.generated.resources.*
 
 sealed interface SectionHeaderImage {
     val imageRes: DrawableResource

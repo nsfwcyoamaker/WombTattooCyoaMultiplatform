@@ -14,11 +14,11 @@ plugins {
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "domain"
+        moduleName = "core"
         browser {
             val projectDirPath = project.projectDir.path
             commonWebpackConfig {
-                outputFileName = "domain.js"
+                outputFileName = "core.js"
                 devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
                     static = (static ?: mutableListOf()).apply {
                         // Serve sources to debug inside browser
@@ -45,7 +45,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "Domain"
+            baseName = "Core"
             isStatic = true
         }
     }
